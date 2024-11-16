@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>私の自己紹介ページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ここにサイト説明を入れます">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="logo"><img style="width: 2;" src="images/logo2.png" alt="my page"></h1>
+
+        <!--開閉ブロック-->
+        <div id="menubar">
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#section2">Profile</a></li>
+                    <li><a href="#section3">Eduactional Background</a></li>
+                    <li><a href="#section4">Gallery</a></li>
+                </ul>
+            </nav>
+
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/profile.php?id=100069546197543">
+                        <i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <!--/#menubar-->
+    </header>
+
+    <main>
+
+        <!-- ここからsection1 -->
+        <section id="section1" class="section"></section>
+
+        <!-- ここからsection2 (Profile) -->
+        <section id="section2" class="section">
+            <i>
+                <h2><b>タマンスシラ</b></h2>
+                <b>
+                    <p>愛和システムエンジニア専門学校の学生</p>
+                    <p>福岡、箱崎1丁目</p>
+                    <p>sushilatmg2002@gmail.com</p>
+                    <h3>私について</h3>
+                    <p>テクノロジーの世界への旅に乗り出す私は、新進気鋭の技術愛好家であり、システムエンジニアになることに強い興味を持っています。学び、探求することを熱望し、技術の力を通じて、異なる分野をつなぐアイデアに魅了されています。初心者の心構えと知識の渇望を持ち、このエキサイティングな道に先がある可能性を発見することを楽しみにしています。</p>
+                </b>
+            </i>
+        </section>
+
+        <!-- ここからsection3 (Educational Background) -->
+        <section id="section3" class="section">
+            <h2><i><b>学歴</b></i></h2>
+            <h2>ネパールから日本までの私の学歴</h2>
+
+            <dl class="new">
+                <d1>
+                    <b>
+                        <dt>2014/03/25(中学校卒業)</dt>
+                        <dd>shree bhairum higher secondary school.</dd>
+
+                        <dt>2016/03/02(高校卒業)</dt>
+                        <dd>shree bhairum higher secondary school</dd>
+
+                        <dt>2017~2021(英語専攻学士)</dt>
+                        <dd>tribhuwan trishuli multiple campus</dd>
+
+                        <dt>2023/03/15(日本語学校卒業)</dt>
+                        <dd>愛和外語学院</dd>
+
+                        <dt>2024/03/08(専門学校卒業)</dt>
+                        <dd>国際アニメーション専門学校</dd>
+
+                        <dt>2024/04/05(入学)</dt>
+                        <dd>愛和システムエンジニア専門学校</dd>
+                    </b>
+                </d1>
+            </dl>
+        </section>
+
+        <!-- ここからsection4 (Gallery) -->
+        <section id="section4" class="section">
+            <h2>ギャラリー</h2>
+
+            <div class="list-grid-trimming">
+                <div class="list">
+                    <a href="images/section1.jpg" data-lightbox="group1" data-title="タイトルをここに入れます">
+                        <img src="images/section1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="images/section2.jpg" data-lightbox="group1" data-title="タイトルをここに入れます">
+                        <img src="images/section2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="images/section3.jpg" data-lightbox="group1" data-title="タイトルをここに入れます">
+                        <img src="images/section3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="images/sss.jpg" data-lightbox="group1" data-title="タイトルをここに入れます">
+                        <img src="images/sss.jpg" alt="">
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="images/4154.jpg" data-lightbox="group1" data-title="タイトルをここに入れます">
+                        <img src="images/4154.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--ページの上部へ戻るボタン-->
+    <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+    <!--開閉ボタン（ハンバーガーアイコン）-->
+    <div id="menubar_hdr">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Custom JavaScript for Scroll Effect -->
+    <script>
+        $(document).ready(function () {
+            // Offset for fixed navbar
+            var headerHeight = $('header').outerHeight();
+            $('a[href^="#"]').on('click', function (e) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    e.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - headerHeight
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+
+    <!--テンプレート専用のスクリプト-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
